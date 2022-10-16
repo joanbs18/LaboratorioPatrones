@@ -1,3 +1,5 @@
+package Nodos;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -11,9 +13,9 @@ public abstract class Nodo {
     public static  final int ARCHIVO =1;
     public static  final int CARPETA =2;
     
-    private String nombre="";
-    private int tipoN;
-    private int tamanio;
+    protected String nombre="";
+    protected int tipoN;
+    protected int tamanio;
 
     public String getNombre() {
         return nombre;
