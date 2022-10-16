@@ -8,5 +8,6 @@
  * @author joans
  */
 public interface Almacenamiento {
-    public int getAlmacenamiento();
+    public void sendPartition();
+   
 }

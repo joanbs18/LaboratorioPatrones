@@ -13,14 +13,36 @@ private Disco disk;
   private int tamaño;
     private boolean estado; //ACTIVO O INACTIVO
 
-    public Particion(int tamaño) {
+    public Particion(int tamaño,Disco disco) {
         this.tamaño = tamaño;
         this.estado = true;
+        disk= disco;
+       
     }
 
     @Override
-    public int getAlmacenamiento() {
+    public void sendPartition() {
+        disk.añadirParticion(this);
+    }
+
+    public char getLetra() {
+        return letra;
+    }
+
+    public Disco getDisk() {
+        return disk;
+    }
+
+    public int getTamaño() {
         return tamaño;
     }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+   
+
+  
 
 }
