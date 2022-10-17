@@ -5,6 +5,7 @@
 package Nodos.TiposArchivos;
 
 import Nodos.Archivo;
+import Nodos.Carpeta;
 
 /**
  *
@@ -22,6 +23,7 @@ public class Creador extends CreadorAbstract{
       switch(tipo){
           case AUDIO:
               objeto=new Audio(nombre,tamanio);
+              
           case VIDEO:
               objeto=new Video(nombre,tamanio);
           case WORD:

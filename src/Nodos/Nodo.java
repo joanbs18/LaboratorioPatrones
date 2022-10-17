@@ -14,7 +14,7 @@ public abstract class Nodo {
     public static  final int CARPETA =2;
     
     protected String nombre="";
-    protected int tipoN;
+    protected int tipoN;//tipo nodo
     protected int tamanio;
 
     public String getNombre() {

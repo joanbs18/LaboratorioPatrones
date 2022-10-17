@@ -20,8 +20,7 @@ public abstract class Archivo extends Nodo {
 
     @Override
     public void mostrar() {
-        // qui muestra el archivo pero no se si tiene que ser con retorno para la 
-        // interfaz grafica.
+        System.out.println("Archivo: ["+this.getNombre()+"]");
     }
     
     

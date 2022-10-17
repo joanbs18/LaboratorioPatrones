@@ -18,6 +18,13 @@ public class Carpeta extends Nodo {
         this.setNombre(nombre);
         this.setTamanio(tamanio);
     }
+    //se crea carpeta por defecto
+    public Carpeta() {
+        this.setTipoN(Nodo.CARPETA);
+        this.setNombre("Nueva Carpeta");
+        this.setTamanio(0);
+    }
+    
     //para agregar dentro de la carpeta ya sea otra carpeta 
     public void agregar(Nodo tipoNodo){
         contenedor.add(tipoNodo);
@@ -25,22 +32,21 @@ public class Carpeta extends Nodo {
     public void eliminar(Nodo tipoNodo){
         contenedor.remove(tipoNodo);
     }
-    //para que busque si si hay una carpeto o archivo y lo devuelva
-    public Nodo obtener(Nodo tipoNodo){
-        Nodo nodo=null;
-        for (int i = 0; i < contenedor.size(); i++) {
-            if(contenedor.contains(tipoNodo)){
-                nodo=contenedor.get(i);
-            }else{
-                nodo= nodo;
-            }
-        }
-        return nodo;
+    public Nodo getNodo(int posicion) {
+        return contenedor.get(posicion);
+    }
+    //para que busque si hay una carpeto o archivo y lo devuelva
+    public ArrayList<Nodo> getNodos() {
+        return contenedor;
     }
 
     @Override
     public void mostrar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Carpeta: [" + this.getNombre() + "]");
+        for (Nodo nodo : contenedor) {
+            nodo.mostrar();
+        }
+
     }
     
     
