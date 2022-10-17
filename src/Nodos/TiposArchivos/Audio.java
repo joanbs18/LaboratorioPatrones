@@ -13,14 +13,15 @@ import Nodos.Archivo;
 public class Audio extends Archivo{
 
     public Audio(String nombre, int tamanio) {
-        super(nombre, tamanio);
+        super(nombre+".mp3", tamanio);
     }
 
-    public void reproducir() {
-        System.out.println("Se esta reproduciendo...");
+    public String reproducir() {
+        return "Se esta reproduciendo...";
     }
-    public void deneter() {
-        System.out.println("Se esta deteniendo...");
+    public String deneter() {
+        
+        return "Se esta deteniendo...";
     }
     
     @Override

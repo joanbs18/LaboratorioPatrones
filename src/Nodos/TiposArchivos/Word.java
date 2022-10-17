@@ -13,7 +13,7 @@ import Nodos.Archivo;
 public class Word extends Archivo{
 
     public Word(String nombre, int tamanio) {
-        super(nombre, tamanio);
+        super(nombre+"docx", tamanio);
     }
     
     @Override

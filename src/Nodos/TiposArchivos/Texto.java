@@ -13,7 +13,7 @@ import Nodos.Archivo;
 public class Texto extends Archivo{
 
     public Texto(String nombre, int tamanio) {
-        super(nombre, tamanio);
+        super(nombre+"txt", tamanio);
     }
 
     @Override

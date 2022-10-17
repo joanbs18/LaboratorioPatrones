@@ -13,7 +13,7 @@ import Nodos.Archivo;
 public class Imagen extends Archivo{
 
     public Imagen(String nombre, int tamanio) {
-        super(nombre, tamanio);
+        super(nombre+".jpg", tamanio);
     }
     
     @Override

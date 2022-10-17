@@ -13,7 +13,7 @@ import Nodos.Archivo;
 public class Excel extends Archivo{
 
     public Excel(String nombre, int tamanio) {
-        super(nombre, tamanio);
+        super(nombre+".xlsx", tamanio);
     }
     
     @Override

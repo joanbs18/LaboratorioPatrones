@@ -13,7 +13,7 @@ import Nodos.Archivo;
 public class PowerPoint extends Archivo{
 
     public PowerPoint(String nombre, int tamanio) {
-        super(nombre, tamanio);
+        super(nombre+"pptsx", tamanio);
     }
     
     @Override

@@ -13,13 +13,14 @@ import Nodos.Archivo;
 public class Video extends Archivo{
 
     public Video(String nombre, int tamanio) {
-        super(nombre, tamanio);
+        super(nombre+".avi", tamanio);
     }
-    public void reproducir() {
-        System.out.println("Se esta reproduciendo...");
+    public String reproducir() {
+        return "Se esta reproduciendo...";
     }
-    public void deneter() {
-        System.out.println("Se esta deteniendo...");
+    public String deneter() {
+        
+        return "Se esta deteniendo...";
     }
 
     @Override
