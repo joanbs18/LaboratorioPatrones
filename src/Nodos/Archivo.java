@@ -8,14 +8,15 @@ package Nodos;
  *
  * @author Francisco
  */
-public class Archivo extends Nodo {
+public abstract class Archivo extends Nodo {
 
     public Archivo(String nombre,int tamanio) {
         this.setTipoN(Nodo.ARCHIVO);
         this.setNombre(nombre);
         this.setTamanio(tamanio);
     }
-    
+    public abstract void abrir();//para heredar a los archivos demas archivos
+    public abstract void cerrar();
 
     @Override
     public void mostrar() {

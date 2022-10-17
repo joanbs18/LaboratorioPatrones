@@ -18,11 +18,11 @@ public class Carpeta extends Nodo {
         this.setNombre(nombre);
         this.setTamanio(tamanio);
     }
-    //para agregar dentro de la carpeta ya sea otra carpeta o otro archivo
+    //para agregar dentro de la carpeta ya sea otra carpeta 
     public void agregar(Nodo tipoNodo){
         contenedor.add(tipoNodo);
     }
-    public void elinimar(Nodo tipoNodo){
+    public void eliminar(Nodo tipoNodo){
         contenedor.remove(tipoNodo);
     }
     //para que busque si si hay una carpeto o archivo y lo devuelva
