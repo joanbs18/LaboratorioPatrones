@@ -16,10 +16,11 @@ public class NewMain {
        Disco c= Disco.getInstancia();
        c.crearDisco();
        Particion p1= new Particion(200,c);
-       Particion p2= new Particion(300,c);
+       Particion p2= new Particion(200,c);
        p1.sendPartition();
        p2.sendPartition();
         System.out.println(c.getEspacioDisponible());
+        System.out.println(p2);
     }
     
 }
