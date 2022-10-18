@@ -52,6 +52,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnDisco.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disco48.png"))); // NOI18N
         btnDisco.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         btnDisco.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnDisco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDiscoActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnDisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 362, -1, 80));
 
         jButton1.setText("jButton1");
@@ -172,6 +177,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        jpbDisco.setValue(50);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiscoActionPerformed
+        FrmDisco disco = new FrmDisco();
+        disco.setVisible(true);
+    }//GEN-LAST:event_btnDiscoActionPerformed
 
     /**
      * @param args the command line arguments

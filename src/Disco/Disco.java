@@ -1,3 +1,5 @@
+package Disco;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -49,9 +51,8 @@ public class Disco {
             if (!particiones.contains(p)) {
                 this.espacioDisponible -= p.getTamaño();
                 particiones.add(p);
-                System.out.println("Listo");
             } else {
-                System.out.println("Existe");
+                JOptionPane.showMessageDialog(null, "Error", "ERROR", JOptionPane.ERROR_MESSAGE);
                 p = null;
             }
         } else {
