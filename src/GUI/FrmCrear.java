@@ -163,7 +163,7 @@ public class FrmCrear extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "El nombre de la carpeta ya existe. Por favor, nombre distinto a la carpeta.", "Se ha producido un error.", JOptionPane.ERROR_MESSAGE);
                 nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
                 for (int i = 0; i < 10; i++) {
-                   boolean existe = carpeta.contenedor.contains(nombre); 
+//                   boolean existe = carpeta.contenedor.contains(nombre); 
         }
         carpeta.agregar(carpeta);
 
