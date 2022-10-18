@@ -32,6 +32,7 @@ public class FrmVerCarpetas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblEstasEn = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listCarpetas = new javax.swing.JList<>();
         lblFondo = new javax.swing.JLabel();
@@ -39,6 +40,11 @@ public class FrmVerCarpetas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblEstasEn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 12)); // NOI18N
+        lblEstasEn.setForeground(new java.awt.Color(255, 255, 255));
+        lblEstasEn.setText("ESTÁS EN: VER CARPETAS");
+        getContentPane().add(lblEstasEn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
         listCarpetas.setBackground(new java.awt.Color(0, 51, 102));
         listCarpetas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 102), 3, true));
@@ -228,6 +234,7 @@ public class FrmVerCarpetas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblEstasEn;
     private javax.swing.JLabel lblFondo;
     private javax.swing.JList<String> listCarpetas;
     // End of variables declaration//GEN-END:variables

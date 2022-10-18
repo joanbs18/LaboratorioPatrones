@@ -29,6 +29,7 @@ public class FrmModificar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblEstasEn = new javax.swing.JLabel();
         btnCarpeta = new javax.swing.JButton();
         btnArchivo = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
@@ -36,6 +37,11 @@ public class FrmModificar extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblEstasEn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 12)); // NOI18N
+        lblEstasEn.setForeground(new java.awt.Color(255, 255, 255));
+        lblEstasEn.setText("ESTÁS EN: MODIFICAR");
+        getContentPane().add(lblEstasEn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
         btnCarpeta.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
         btnCarpeta.setForeground(new java.awt.Color(255, 255, 255));
@@ -234,6 +240,7 @@ public class FrmModificar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnArchivo;
     private javax.swing.JButton btnCarpeta;
+    private javax.swing.JLabel lblEstasEn;
     private javax.swing.JLabel lblFondo;
     // End of variables declaration//GEN-END:variables
 }
