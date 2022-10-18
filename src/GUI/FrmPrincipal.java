@@ -110,6 +110,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnVer.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ver48.png"))); // NOI18N
         btnVer.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         btnVer.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, 80));
 
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.jpg"))); // NOI18N
@@ -130,6 +135,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
+        
+    }//GEN-LAST:event_btnVerActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,19 +4,21 @@
  */
 package GUI;
 
-import Nodos.Carpeta;
+import Nodos.Archivo;
+import Nodos.Nodo;
+import Nodos.TiposArchivos.Creador;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author josep
  */
-public class FrmEliminar extends javax.swing.JFrame {
+public class FrmVerArchivos extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public FrmEliminar() {
+    public FrmVerArchivos() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -81,23 +83,80 @@ public class FrmEliminar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArchivoActionPerformed
-//        Archivo a = null;
-//        String nombre = JOptionPane.showInputDialog(null, "Digite el nombre de la carpeta a eliminar", "CARPETA", JOptionPane.INFORMATION_MESSAGE);
-//        for (int i = 0; i < a.getNodos().size(); i++) {
-//            if (a.getNodos().get(i).getNombre().equals(nombre)) {
-//                a.eliminar(a);
-//            }
-//        }
+        String nombre = "";
+        String tamannioS = "";
+        int tamannio = 0;
+        int tipo = 0;
+        String tipoS = "";
+
+        //-----------------------------------------------------------------------------------------------------------------------------------//
+        do {
+            nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su archivo", "ARCHIVO", JOptionPane.QUESTION_MESSAGE);
+            if (("".equals(nombre))) {
+                JOptionPane.showMessageDialog(null, "El nombre no puede estar vacio", "ARCHIVO", JOptionPane.ERROR_MESSAGE);
+            }
+        } while ("".equals(nombre));
+
+        //-----------------------------------------------------------------------------------------------------------------------------------//
+        do {
+            tamannioS = JOptionPane.showInputDialog(null, "Digite el tamaño de su archivo", "ARCHIVO", JOptionPane.QUESTION_MESSAGE);
+            tamannio = Integer.parseInt(tamannioS);
+            if (tamannio == 0) {
+                JOptionPane.showMessageDialog(null, "El tamaño no puede ser 0", "ARCHIVO", JOptionPane.ERROR_MESSAGE);
+            }
+        } while (tamannio == 0);
+
+        //-----------------------------------------------------------------------------------------------------------------------------------//
+      
+        do {
+            tipoS = JOptionPane.showInputDialog(null, "Escoja un tipo de archivo:\n0- Salir\n1- Audio\n2- Video\n3- Word\n4- Texto \n5- Excel\n6- PowerPoint", "ARCHIVO", JOptionPane.QUESTION_MESSAGE);
+            tipo = Integer.parseInt(tipoS);
+            if (tipo == 0) {
+                break;
+            }
+        } while (tipo != 0 || tipo != 1 || tipo != 2 || tipo != 3 || tipo != 4 || tipo != 5 || tipo != 6);
+
+        Creador c = new Creador();
+        c.Crear(tipo, nombre, tamannio);
+        JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "ARCHIVO", JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_btnArchivoActionPerformed
 
     private void btnCarpetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarpetaActionPerformed
-        Carpeta c = null;
-        String nombre = JOptionPane.showInputDialog(null, "Digite el nombre de la carpeta a eliminar", "CARPETA", JOptionPane.INFORMATION_MESSAGE);
-        for (int i = 0; i < c.getNodos().size(); i++) {
-            if (c.getNodos().get(i).getNombre().equals(nombre)) {
-                c.eliminar(c);
+       
+        String nombre = "";
+        String tamannioS = "";
+        int tamannio = 0;
+      
+        //-----------------------------------------------------------------------------------------------------------------------------------//
+     
+        do {
+            nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
+            if (("".equals(nombre))) {
+                JOptionPane.showMessageDialog(null, "El nombre no puede estar vacio", "CARPETA", JOptionPane.ERROR_MESSAGE);
             }
-        }
+       
+        } while ("".equals(nombre));
+        //-----------------------------------------------------------------------------------------------------------------------------------//
+       
+        do {
+            tamannioS = JOptionPane.showInputDialog(null, "Digite el tamaño de su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
+            tamannio = Integer.parseInt(tamannioS);
+            if (tamannio == 0) {
+                JOptionPane.showMessageDialog(null, "El tamaño no puede ser 0", "CARPETA", JOptionPane.ERROR_MESSAGE);
+            }
+       
+        } while (tamannio == 0);
+        JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "ARCHIVO", JOptionPane.PLAIN_MESSAGE);
+        //-----------------------------------------------------------------------------------------------------------------------------------//
+//        Carpeta carpeta = new Carpeta(nombre, tamannio);
+//        for (int i = 0; i < carpeta.contenedor.size(); i++) {
+//            if (carpeta.contenedor.get(i).getNombre() == nombre) {
+//                JOptionPane.showMessageDialog(null, "El nombre de la carpeta ya existe. Por favor, nombre distinto a la carpeta.", "Se ha producido un error.", JOptionPane.ERROR_MESSAGE);
+//                nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
+//            } else {
+//                carpeta.agregar(carpeta);
+//            }
+//        }
     }//GEN-LAST:event_btnCarpetaActionPerformed
 
     /**
@@ -117,78 +176,14 @@ public class FrmEliminar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmEliminar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmVerArchivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmEliminar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmVerArchivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmEliminar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmVerArchivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmEliminar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmVerArchivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -257,7 +252,7 @@ public class FrmEliminar extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmEliminar().setVisible(true);
+                new FrmVerArchivos().setVisible(true);
             }
         });
     }
