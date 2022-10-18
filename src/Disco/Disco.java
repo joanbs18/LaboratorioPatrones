@@ -56,7 +56,7 @@ public class Disco {
                 p = null;
             }
         } else {
-            System.out.println("No tienes sufiente espacio");
+            JOptionPane.showMessageDialog(null, "No tienes sufiente espacio", "ERROR", JOptionPane.ERROR_MESSAGE);
             p = null;
         }
     }

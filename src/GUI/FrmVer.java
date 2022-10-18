@@ -72,7 +72,7 @@ public class FrmVer extends javax.swing.JFrame {
                 btnCarpetaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCarpeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, 80));
+        getContentPane().add(btnCarpeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, -1, 80));
 
         btnArchivo.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
         btnArchivo.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +90,7 @@ public class FrmVer extends javax.swing.JFrame {
                 btnArchivoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, 80));
+        getContentPane().add(btnArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, -1, 80));
 
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.jpg"))); // NOI18N
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 660));

@@ -6,13 +6,16 @@ package GUI;
 
 import Disco.Disco;
 import Disco.Particion;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author josep
  */
 public class FrmDisco extends javax.swing.JFrame {
+
     Disco c;
+
     /**
      * Creates new form Principal
      */
@@ -97,7 +100,14 @@ public class FrmDisco extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearParticionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearParticionActionPerformed
-        Particion p1= new Particion(200,c);
+        if (c == null) {
+            JOptionPane.showMessageDialog(null, "Debe crear un disco para realizar una partición", "ERROR", JOptionPane.ERROR_MESSAGE);
+        } else {
+            String tamannioS = JOptionPane.showInputDialog(null, "Ingrese el tamaño de esta partición", "DISCO", JOptionPane.QUESTION_MESSAGE);
+            int tamannio = Integer.parseInt(tamannioS);
+            Particion p1 = new Particion(tamannio, c);
+            p1.sendPartition();
+        }
     }//GEN-LAST:event_btnCrearParticionActionPerformed
 
     private void btnCrearDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearDiscoActionPerformed
@@ -130,7 +140,7 @@ public class FrmDisco extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FrmDisco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-       
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FrmDisco().setVisible(true);
