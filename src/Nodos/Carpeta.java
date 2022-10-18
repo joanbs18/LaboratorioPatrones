@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Francisco
  */
 public class Carpeta extends Nodo {
-    private ArrayList <Nodo> contenedor=new ArrayList();
+    public ArrayList <Nodo> contenedor=new ArrayList();
 
     public Carpeta(String nombre,int tamanio) {
         this.setTipoN(Nodo.CARPETA);

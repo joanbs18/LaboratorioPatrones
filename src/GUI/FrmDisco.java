@@ -4,22 +4,18 @@
  */
 package GUI;
 
-import Nodos.Archivo;
-import Nodos.Carpeta;
-import Nodos.Nodo;
-import Nodos.TiposArchivos.Creador;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author josep
  */
-public class FrmCrear extends javax.swing.JFrame {
+public class FrmDisco extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public FrmCrear() {
+    public FrmDisco() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -54,7 +50,7 @@ public class FrmCrear extends javax.swing.JFrame {
 
         lblEstasEn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 12)); // NOI18N
         lblEstasEn.setForeground(new java.awt.Color(255, 255, 255));
-        lblEstasEn.setText("ESTÁS EN: CREAR");
+        lblEstasEn.setText("ESTÁS EN: CONCFIGURACIÓN DEL DISCO");
         getContentPane().add(lblEstasEn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
         btnCarpeta.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
@@ -159,12 +155,9 @@ public class FrmCrear extends javax.swing.JFrame {
 
         //-----------------------------------------------------------------------------------------------------------------------------------//
         Carpeta carpeta = new Carpeta(nombre, tamannio);
-        boolean existe = carpeta.contenedor.contains(nombre);
                 JOptionPane.showMessageDialog(null, "El nombre de la carpeta ya existe. Por favor, nombre distinto a la carpeta.", "Se ha producido un error.", JOptionPane.ERROR_MESSAGE);
                 nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
-                for (int i = 0; i < 10; i++) {
-                   boolean existe = carpeta.contenedor.contains(nombre); 
-        }
+
         carpeta.agregar(carpeta);
 
 
@@ -191,14 +184,46 @@ public class FrmCrear extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmCrear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmDisco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmCrear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmDisco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmCrear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmDisco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmCrear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmDisco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -235,7 +260,7 @@ public class FrmCrear extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmCrear().setVisible(true);
+                new FrmDisco().setVisible(true);
             }
         });
     }

@@ -27,6 +27,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnDisco = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jpbDisco = new javax.swing.JProgressBar();
         lblDisco = new javax.swing.JLabel();
         btnModificar = new javax.swing.JButton();
@@ -38,6 +40,30 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnDisco.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
+        btnDisco.setForeground(new java.awt.Color(255, 255, 255));
+        btnDisco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disco32.png"))); // NOI18N
+        btnDisco.setText("DISCO");
+        btnDisco.setToolTipText("Configurar disco");
+        btnDisco.setContentAreaFilled(false);
+        btnDisco.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDisco.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disco32.png"))); // NOI18N
+        btnDisco.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disco48.png"))); // NOI18N
+        btnDisco.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnDisco.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnDisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 362, -1, 80));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, -1, -1));
+
+        jpbDisco.setMinimum(1);
+        jpbDisco.setValue(0);
         getContentPane().add(jpbDisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 600, 20));
 
         lblDisco.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 12)); // NOI18N
@@ -143,6 +169,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
         ver.setVisible(true);
     }//GEN-LAST:event_btnVerActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       jpbDisco.setValue(50);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -187,9 +217,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrear;
+    private javax.swing.JButton btnDisco;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnVer;
+    private javax.swing.JButton jButton1;
     private javax.swing.JProgressBar jpbDisco;
     private javax.swing.JLabel lblDisco;
     private javax.swing.JLabel lblFondo;
