@@ -100,7 +100,7 @@ public class FrmDisco extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearParticionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearParticionActionPerformed
-        if (c == null) {
+        if (Disco.verificar()) {
             JOptionPane.showMessageDialog(null, "Debe crear un disco para realizar una partición", "ERROR", JOptionPane.ERROR_MESSAGE);
         } else {
             String tamannioS = JOptionPane.showInputDialog(null, "Ingrese el tamaño de esta partición", "DISCO", JOptionPane.QUESTION_MESSAGE);
