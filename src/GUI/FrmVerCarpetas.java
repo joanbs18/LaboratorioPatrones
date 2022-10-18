@@ -32,6 +32,7 @@ public class FrmVerCarpetas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnAtras = new javax.swing.JButton();
         lblEstasEn = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listCarpetas = new javax.swing.JList<>();
@@ -40,6 +41,15 @@ public class FrmVerCarpetas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnAtras.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 12)); // NOI18N
+        btnAtras.setText("ATRÁS");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, -1, -1));
 
         lblEstasEn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 12)); // NOI18N
         lblEstasEn.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,6 +79,10 @@ public class FrmVerCarpetas extends javax.swing.JFrame {
     private void listCarpetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listCarpetasMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_listCarpetasMouseClicked
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,6 +247,7 @@ public class FrmVerCarpetas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAtras;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblEstasEn;
     private javax.swing.JLabel lblFondo;
