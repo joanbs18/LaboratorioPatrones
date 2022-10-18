@@ -8,12 +8,12 @@ package GUI;
  *
  * @author josep
  */
-public class Principal extends javax.swing.JFrame {
+public class FrmPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public FrmPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -27,15 +27,23 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jpbDisco = new javax.swing.JProgressBar();
+        lblDisco = new javax.swing.JLabel();
         btnModificar = new javax.swing.JButton();
-        btnCrear2 = new javax.swing.JButton();
-        btnEliminar = new javax.swing.JButton();
         btnCrear = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnVer = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jpbDisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 600, 20));
+
+        lblDisco.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 12)); // NOI18N
+        lblDisco.setForeground(new java.awt.Color(255, 255, 255));
+        lblDisco.setText("ESPACIO DEL DISCO");
+        getContentPane().add(lblDisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, 20));
 
         btnModificar.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
         btnModificar.setForeground(new java.awt.Color(255, 255, 255));
@@ -48,25 +56,30 @@ public class Principal extends javax.swing.JFrame {
         btnModificar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/modificar48.png"))); // NOI18N
         btnModificar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         btnModificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, -1, 80));
-
-        btnCrear2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
-        btnCrear2.setForeground(new java.awt.Color(255, 255, 255));
-        btnCrear2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/crear32.png"))); // NOI18N
-        btnCrear2.setText("CREAR");
-        btnCrear2.setToolTipText("Crear archivo");
-        btnCrear2.setContentAreaFilled(false);
-        btnCrear2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCrear2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/crear32.png"))); // NOI18N
-        btnCrear2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/crear48.png"))); // NOI18N
-        btnCrear2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btnCrear2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCrear2.addActionListener(new java.awt.event.ActionListener() {
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCrear2ActionPerformed(evt);
+                btnModificarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCrear2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, 80));
+        getContentPane().add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, -1, 80));
+
+        btnCrear.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
+        btnCrear.setForeground(new java.awt.Color(255, 255, 255));
+        btnCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/crear32.png"))); // NOI18N
+        btnCrear.setText("CREAR");
+        btnCrear.setToolTipText("Crear archivo");
+        btnCrear.setContentAreaFilled(false);
+        btnCrear.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCrear.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/crear32.png"))); // NOI18N
+        btnCrear.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/crear48.png"))); // NOI18N
+        btnCrear.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnCrear.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, 80));
 
         btnEliminar.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,23 +97,23 @@ public class Principal extends javax.swing.JFrame {
                 btnEliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, -1, 80));
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 210, -1, 80));
 
-        btnCrear.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
-        btnCrear.setForeground(new java.awt.Color(255, 255, 255));
-        btnCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ver32.png"))); // NOI18N
-        btnCrear.setText("VER ARCHIVOS");
-        btnCrear.setToolTipText("Ver archivos");
-        btnCrear.setContentAreaFilled(false);
-        btnCrear.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCrear.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ver32.png"))); // NOI18N
-        btnCrear.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ver48.png"))); // NOI18N
-        btnCrear.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btnCrear.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, -1, 80));
+        btnVer.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
+        btnVer.setForeground(new java.awt.Color(255, 255, 255));
+        btnVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ver32.png"))); // NOI18N
+        btnVer.setText("VER ARCHIVOS");
+        btnVer.setToolTipText("Ver archivos");
+        btnVer.setContentAreaFilled(false);
+        btnVer.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVer.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ver32.png"))); // NOI18N
+        btnVer.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ver48.png"))); // NOI18N
+        btnVer.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnVer.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, 80));
 
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.jpg"))); // NOI18N
-        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 740));
+        getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -109,9 +122,14 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminarActionPerformed
 
-    private void btnCrear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrear2ActionPerformed
-        
-    }//GEN-LAST:event_btnCrear2ActionPerformed
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+        FrmCrear crear = new FrmCrear();
+        crear.setVisible(true);
+    }//GEN-LAST:event_btnCrearActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,29 +148,38 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new FrmPrincipal().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrear;
-    private javax.swing.JButton btnCrear2;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnModificar;
+    private javax.swing.JButton btnVer;
+    private javax.swing.JProgressBar jpbDisco;
+    private javax.swing.JLabel lblDisco;
     private javax.swing.JLabel lblFondo;
     // End of variables declaration//GEN-END:variables
 }
