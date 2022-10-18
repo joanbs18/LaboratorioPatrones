@@ -4,11 +4,16 @@
  */
 package GUI;
 
+import Disco.Disco;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author josep
  */
 public class FrmPrincipal extends javax.swing.JFrame {
+
+    Disco d;
 
     /**
      * Creates new form Principal
@@ -160,8 +165,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
-        FrmCrear crear = new FrmCrear();
-        crear.setVisible(true);
+        if (Disco.verificar()) {
+            JOptionPane.showMessageDialog(null, "Debe crear un disco para crear archivos o carpetas", "ERROR", JOptionPane.ERROR_MESSAGE);
+        } else {
+            FrmCrear crear = new FrmCrear();
+            crear.setVisible(true);
+        }
     }//GEN-LAST:event_btnCrearActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
@@ -175,7 +184,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVerActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       jpbDisco.setValue(50);
+        jpbDisco.setValue(50);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiscoActionPerformed

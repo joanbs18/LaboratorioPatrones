@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class FrmDisco extends javax.swing.JFrame {
 
-    Disco c;
+    public Disco c;
 
     /**
      * Creates new form Principal

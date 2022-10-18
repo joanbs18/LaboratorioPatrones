@@ -4,11 +4,6 @@
  */
 package GUI;
 
-import Nodos.Archivo;
-import Nodos.Nodo;
-import Nodos.TiposArchivos.Creador;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author josep

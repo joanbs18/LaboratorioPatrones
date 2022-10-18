@@ -27,6 +27,10 @@ public class Disco {
 
     }
 
+    public static boolean verificar(){
+        return instancia == null;
+    }
+    
     public static Disco getInstancia() {
         if (instancia == null) {
             instancia = new Disco();
