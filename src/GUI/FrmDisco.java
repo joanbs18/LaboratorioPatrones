@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import Disco;
 import javax.swing.JOptionPane;
 
 /**
@@ -100,7 +101,7 @@ public class FrmDisco extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCrearParticionActionPerformed
 
     private void btnCrearDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearDiscoActionPerformed
-
+        Disco sr = Disco.getInstancia();
     }//GEN-LAST:event_btnCrearDiscoActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
