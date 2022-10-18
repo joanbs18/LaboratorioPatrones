@@ -52,7 +52,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         lblTamannio.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(lblTamannio, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 110, 40, 20));
 
-        lblQueMadre.setText("jLabel1");
+        lblQueMadre.setForeground(new java.awt.Color(255, 255, 255));
+        lblQueMadre.setText("Nos faltó tiempo :(");
         getContentPane().add(lblQueMadre, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 580, -1, -1));
 
         btnDisco.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
