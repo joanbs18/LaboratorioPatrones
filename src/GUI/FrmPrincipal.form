@@ -159,7 +159,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Imagenes/ver32.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="VER ARCHIVOS"/>
+        <Property name="text" type="java.lang.String" value="VER"/>
         <Property name="toolTipText" type="java.lang.String" value="Ver archivos"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -177,7 +177,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="490" y="360" width="-1" height="80"/>
+          <AbsoluteConstraints x="520" y="360" width="-1" height="80"/>
         </Constraint>
       </Constraints>
     </Component>

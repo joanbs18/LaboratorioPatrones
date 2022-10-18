@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  *
  * @author josep
  */
-public class FrmVerArchivos extends javax.swing.JFrame {
+public class FrmVer extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public FrmVerArchivos() {
+    public FrmVer() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -32,37 +32,65 @@ public class FrmVerArchivos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        listCarpetas = new javax.swing.JList<>();
+        btnCarpeta = new javax.swing.JButton();
+        btnArchivo = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        listCarpetas.setBackground(new java.awt.Color(0, 51, 102));
-        listCarpetas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 51, 102), 3, true));
-        listCarpetas.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
-        listCarpetas.setForeground(new java.awt.Color(255, 255, 255));
-        listCarpetas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                listCarpetasMouseClicked(evt);
+        btnCarpeta.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
+        btnCarpeta.setForeground(new java.awt.Color(255, 255, 255));
+        btnCarpeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carpeta32.png"))); // NOI18N
+        btnCarpeta.setText("CARPETA");
+        btnCarpeta.setToolTipText("Crear carpeta");
+        btnCarpeta.setContentAreaFilled(false);
+        btnCarpeta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCarpeta.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carpeta32.png"))); // NOI18N
+        btnCarpeta.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carpeta48.png"))); // NOI18N
+        btnCarpeta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnCarpeta.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCarpeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCarpetaActionPerformed(evt);
             }
         });
-        jScrollPane1.setViewportView(listCarpetas);
+        getContentPane().add(btnCarpeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, 80));
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 500, 320));
+        btnArchivo.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
+        btnArchivo.setForeground(new java.awt.Color(255, 255, 255));
+        btnArchivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/archivo32.png"))); // NOI18N
+        btnArchivo.setText("ARCHIVO");
+        btnArchivo.setToolTipText("Crear archivo");
+        btnArchivo.setContentAreaFilled(false);
+        btnArchivo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnArchivo.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/archivo32.png"))); // NOI18N
+        btnArchivo.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/archivo48.png"))); // NOI18N
+        btnArchivo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnArchivo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnArchivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArchivoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, 80));
 
-        lblFondo.setBackground(new java.awt.Color(0, 153, 153));
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.jpg"))); // NOI18N
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void listCarpetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listCarpetasMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_listCarpetasMouseClicked
+    private void btnArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArchivoActionPerformed
+        FrmVer ver = new FrmVer();
+        ver.setVisible(true);
+    }//GEN-LAST:event_btnArchivoActionPerformed
+
+    private void btnCarpetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarpetaActionPerformed
+        FrmVerCarpetas ver = new FrmVerCarpetas();
+        ver.setVisible(true);
+    }//GEN-LAST:event_btnCarpetaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,142 +109,14 @@ public class FrmVerArchivos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmVerArchivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmVer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmVerArchivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmVer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmVerArchivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmVer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmVerArchivos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmVer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -349,14 +249,14 @@ public class FrmVerArchivos extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmVerArchivos().setVisible(true);
+                new FrmVer().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton btnArchivo;
+    private javax.swing.JButton btnCarpeta;
     private javax.swing.JLabel lblFondo;
-    private javax.swing.JList<String> listCarpetas;
     // End of variables declaration//GEN-END:variables
 }

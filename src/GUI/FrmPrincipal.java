@@ -102,7 +102,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnVer.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
         btnVer.setForeground(new java.awt.Color(255, 255, 255));
         btnVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ver32.png"))); // NOI18N
-        btnVer.setText("VER ARCHIVOS");
+        btnVer.setText("VER");
         btnVer.setToolTipText("Ver archivos");
         btnVer.setContentAreaFilled(false);
         btnVer.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -115,7 +115,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnVerActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 360, -1, 80));
+        getContentPane().add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, -1, 80));
 
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.jpg"))); // NOI18N
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 660));
@@ -124,7 +124,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        // TODO add your handling code here:
+        FrmEliminar eliminar = new FrmEliminar();
+        eliminar.setVisible(true);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
@@ -133,11 +134,13 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCrearActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        // TODO add your handling code here:
+        FrmModificar modificar = new FrmModificar();
+        modificar.setVisible(true);
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
-        
+        FrmVer ver = new FrmVer();
+        ver.setVisible(true);
     }//GEN-LAST:event_btnVerActionPerformed
 
     /**
