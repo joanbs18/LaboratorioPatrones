@@ -24,13 +24,13 @@ public class Carpeta extends Nodo {
     public static boolean verificar(String nombre) {
         for (int i = 0; i < contenedor.size(); i++) {
             if (contenedor.get(i).getNombre().equals(nombre)) {
-                JOptionPane.showMessageDialog(null, "El nombre de la carpeta ya existe. Por favor, nombre distinto a la carpeta.", "Se ha producido un error.", JOptionPane.ERROR_MESSAGE);
-                nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
+
                 return true;
             }
         }
         return false;
     }
+   
 
     //se crea carpeta por defecto
     public Carpeta() {

@@ -124,17 +124,20 @@ public class FrmCrear extends javax.swing.JFrame {
         } while (tamannio == 0);
 
         //-----------------------------------------------------------------------------------------------------------------------------------//
-        do {
-            tipoS = JOptionPane.showInputDialog(null, "Escoja un tipo de archivo:\n0- Salir\n1- Audio\n2- Video\n3- Word\n4- Texto \n5- Excel\n6- PowerPoint", "ARCHIVO", JOptionPane.QUESTION_MESSAGE);
-            tipo = Integer.parseInt(tipoS);
-            if (tipo == 0) {
-                break;
-            }
-        } while (tipo != 0 || tipo != 1 || tipo != 2 || tipo != 3 || tipo != 4 || tipo != 5 || tipo != 6);
+        tipoS = JOptionPane.showInputDialog(null, "Escoja un tipo de archivo:\n0- Salir\n1- Audio\n2- Video\n3- Word\n4- Texto \n5- Excel\n6- PowerPoint", "ARCHIVO", JOptionPane.QUESTION_MESSAGE);
+        tipo = Integer.parseInt(tipoS);
 
         Creador c = new Creador();
         c.Crear(tipo, nombre, tamannio);
-        JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "ARCHIVO", JOptionPane.PLAIN_MESSAGE);
+//        JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "ARCHIVO", JOptionPane.PLAIN_MESSAGE);
+        
+        Carpeta carpeta = new Carpeta(nombre, tamannio);
+        if (Carpeta.verificar(nombre) ) {
+            JOptionPane.showMessageDialog(null, "El nombre de archivo ya existe. Por favor, nombre distinto a la carpeta.", "Se ha producido un error.", JOptionPane.ERROR_MESSAGE);
+        } else {
+            carpeta.agregar(carpeta);
+            JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "ARCHIVO", JOptionPane.PLAIN_MESSAGE);
+        }
     }//GEN-LAST:event_btnArchivoActionPerformed
 
     private void btnCarpetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarpetaActionPerformed
@@ -155,17 +158,15 @@ public class FrmCrear extends javax.swing.JFrame {
 
         tamannioS = JOptionPane.showInputDialog(null, "Digite el tamaño de su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
         tamannio = Integer.parseInt(tamannioS);
-        JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "ARCHIVO", JOptionPane.PLAIN_MESSAGE);
 
         //-----------------------------------------------------------------------------------------------------------------------------------//
         Carpeta carpeta = new Carpeta(nombre, tamannio);
-        boolean existe = carpeta.contenedor.contains(nombre);
-                JOptionPane.showMessageDialog(null, "El nombre de la carpeta ya existe. Por favor, nombre distinto a la carpeta.", "Se ha producido un error.", JOptionPane.ERROR_MESSAGE);
-                nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
-                for (int i = 0; i < 10; i++) {
-//                   boolean existe = carpeta.contenedor.contains(nombre); 
+        if (Carpeta.verificar(nombre)) {
+            JOptionPane.showMessageDialog(null, "El nombre de la carpeta ya existe. Por favor, nombre distinto a la carpeta.", "Se ha producido un error.", JOptionPane.ERROR_MESSAGE);
+        } else {
+            carpeta.agregar(carpeta);
+            JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "CARPETA", JOptionPane.PLAIN_MESSAGE);
         }
-        carpeta.agregar(carpeta);
 
 
     }//GEN-LAST:event_btnCarpetaActionPerformed
