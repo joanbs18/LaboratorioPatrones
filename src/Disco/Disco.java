@@ -19,7 +19,7 @@ public class Disco {
     private static Disco instancia;
     private String Nombre;
     private int tamañoTotal;
-    private int espacioDisponible;
+    private int espacioDisponible = 0;
     private boolean estado = false;
     private ArrayList<Almacenamiento> particiones = new ArrayList();
 

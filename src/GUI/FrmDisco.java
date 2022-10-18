@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 public class FrmDisco extends javax.swing.JFrame {
 
     public Disco c;
+    FrmPrincipal p;
 
     /**
      * Creates new form Principal
@@ -107,12 +108,14 @@ public class FrmDisco extends javax.swing.JFrame {
             int tamannio = Integer.parseInt(tamannioS);
             Particion p1 = new Particion(tamannio, c);
             p1.sendPartition();
+            
         }
     }//GEN-LAST:event_btnCrearParticionActionPerformed
 
     private void btnCrearDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearDiscoActionPerformed
         c = Disco.getInstancia();
         c.crearDisco();
+        p.jpbDisco.setValue(p.jpbDisco.getValue()- c.getTamañoTotal());
     }//GEN-LAST:event_btnCrearDiscoActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed

@@ -12,15 +12,16 @@ import javax.swing.JOptionPane;
  * @author josep
  */
 public class FrmPrincipal extends javax.swing.JFrame {
-
     Disco d;
 
+    
     /**
      * Creates new form Principal
      */
     public FrmPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
+        jpbDisco.setValue(100);
     }
 
     /**
@@ -32,8 +33,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblTamannio = new javax.swing.JLabel();
+        lblQueMadre = new javax.swing.JLabel();
         btnDisco = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jpbDisco = new javax.swing.JProgressBar();
         lblDisco = new javax.swing.JLabel();
         btnModificar = new javax.swing.JButton();
@@ -45,6 +47,13 @@ public class FrmPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTamannio.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 12)); // NOI18N
+        lblTamannio.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(lblTamannio, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 110, 40, 20));
+
+        lblQueMadre.setText("jLabel1");
+        getContentPane().add(lblQueMadre, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 580, -1, -1));
 
         btnDisco.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
         btnDisco.setForeground(new java.awt.Color(255, 255, 255));
@@ -63,14 +72,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnDisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 362, -1, 80));
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, -1, -1));
 
         jpbDisco.setMinimum(1);
         jpbDisco.setValue(0);
@@ -174,18 +175,18 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCrearActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        FrmModificar modificar = new FrmModificar();
-        modificar.setVisible(true);
+        if (Disco.verificar()) {
+            JOptionPane.showMessageDialog(null, "Debe crear un modificar para crear archivos o carpetas", "ERROR", JOptionPane.ERROR_MESSAGE);
+        } else {
+            FrmModificar modificar = new FrmModificar();
+            modificar.setVisible(true);
+        }
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
         FrmVer ver = new FrmVer();
         ver.setVisible(true);
     }//GEN-LAST:event_btnVerActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jpbDisco.setValue(50);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiscoActionPerformed
         FrmDisco disco = new FrmDisco();
@@ -240,9 +241,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnVer;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JProgressBar jpbDisco;
+    public static javax.swing.JProgressBar jpbDisco;
     private javax.swing.JLabel lblDisco;
     private javax.swing.JLabel lblFondo;
+    private javax.swing.JLabel lblQueMadre;
+    public static javax.swing.JLabel lblTamannio;
     // End of variables declaration//GEN-END:variables
 }

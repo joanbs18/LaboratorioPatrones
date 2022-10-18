@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import Disco.Disco;
 import Nodos.Carpeta;
 import javax.swing.JOptionPane;
 
@@ -98,7 +99,11 @@ public class FrmEliminar extends javax.swing.JFrame {
 
     private void btnArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArchivoActionPerformed
 //        Archivo a = null;
+    if (Disco.verificar()) {
+            JOptionPane.showMessageDialog(null, "No existe un disco donde puedan haber carpetas", "ERROR", JOptionPane.ERROR_MESSAGE);
+        } else {
         String nombre = JOptionPane.showInputDialog(null, "Digite el nombre de la carpeta a eliminar", "CARPETA", JOptionPane.INFORMATION_MESSAGE);
+    }
 //        for (int i = 0; i < a.getNodos().size(); i++) {
 //            if (a.getNodos().get(i).getNombre().equals(nombre)) {
 //                a.eliminar(a);
@@ -107,11 +112,17 @@ public class FrmEliminar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnArchivoActionPerformed
 
     private void btnCarpetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarpetaActionPerformed
-        Carpeta c = null;
-        String nombre = JOptionPane.showInputDialog(null, "Digite el nombre de la carpeta a eliminar", "CARPETA", JOptionPane.INFORMATION_MESSAGE);
-        for (int i = 0; i < c.getNodos().size(); i++) {
-            if (c.getNodos().get(i).getNombre().equals(nombre)) {
-                c.eliminar(c);
+        if (Disco.verificar()) {
+            JOptionPane.showMessageDialog(null, "No existe un disco donde puedan haber carpetas", "ERROR", JOptionPane.ERROR_MESSAGE);
+        } else {
+            
+            Carpeta c = null;
+
+            String nombre = JOptionPane.showInputDialog(null, "Digite el nombre de la carpeta a eliminar", "CARPETA", JOptionPane.INFORMATION_MESSAGE);
+            for (int i = 0; i < c.getNodos().size(); i++) {
+                if (c.getNodos().get(i).getNombre().equals(nombre)) {
+                    c.eliminar(c);
+                }
             }
         }
     }//GEN-LAST:event_btnCarpetaActionPerformed
