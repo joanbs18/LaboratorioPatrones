@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import Disco;
 import javax.swing.JOptionPane;
 
 /**
@@ -31,8 +32,8 @@ public class FrmDisco extends javax.swing.JFrame {
 
         btnAtras = new javax.swing.JButton();
         lblEstasEn = new javax.swing.JLabel();
-        btnCarpeta = new javax.swing.JButton();
-        btnArchivo = new javax.swing.JButton();
+        btnCrearDisco = new javax.swing.JButton();
+        btnCrearParticion = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -50,44 +51,44 @@ public class FrmDisco extends javax.swing.JFrame {
 
         lblEstasEn.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 12)); // NOI18N
         lblEstasEn.setForeground(new java.awt.Color(255, 255, 255));
-        lblEstasEn.setText("ESTÁS EN: CONCFIGURACIÓN DEL DISCO");
+        lblEstasEn.setText("ESTÁS EN: CONFIGURACIÓN DEL DISCO");
         getContentPane().add(lblEstasEn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
-        btnCarpeta.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
-        btnCarpeta.setForeground(new java.awt.Color(255, 255, 255));
-        btnCarpeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carpeta32.png"))); // NOI18N
-        btnCarpeta.setText("CARPETA");
-        btnCarpeta.setToolTipText("Crear carpeta");
-        btnCarpeta.setContentAreaFilled(false);
-        btnCarpeta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCarpeta.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carpeta32.png"))); // NOI18N
-        btnCarpeta.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/carpeta48.png"))); // NOI18N
-        btnCarpeta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btnCarpeta.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCarpeta.addActionListener(new java.awt.event.ActionListener() {
+        btnCrearDisco.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
+        btnCrearDisco.setForeground(new java.awt.Color(255, 255, 255));
+        btnCrearDisco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/discoCrear32.png"))); // NOI18N
+        btnCrearDisco.setText("CREAR");
+        btnCrearDisco.setToolTipText("Crear disco");
+        btnCrearDisco.setContentAreaFilled(false);
+        btnCrearDisco.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCrearDisco.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/discoCrear32.png"))); // NOI18N
+        btnCrearDisco.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/discoCrear48.png"))); // NOI18N
+        btnCrearDisco.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnCrearDisco.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCrearDisco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCarpetaActionPerformed(evt);
+                btnCrearDiscoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCarpeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, 80));
+        getContentPane().add(btnCrearDisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, 80));
 
-        btnArchivo.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
-        btnArchivo.setForeground(new java.awt.Color(255, 255, 255));
-        btnArchivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/archivo32.png"))); // NOI18N
-        btnArchivo.setText("ARCHIVO");
-        btnArchivo.setToolTipText("Crear archivo");
-        btnArchivo.setContentAreaFilled(false);
-        btnArchivo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnArchivo.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/archivo32.png"))); // NOI18N
-        btnArchivo.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/archivo48.png"))); // NOI18N
-        btnArchivo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btnArchivo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnArchivo.addActionListener(new java.awt.event.ActionListener() {
+        btnCrearParticion.setFont(new java.awt.Font("Yu Gothic UI Semibold", 1, 14)); // NOI18N
+        btnCrearParticion.setForeground(new java.awt.Color(255, 255, 255));
+        btnCrearParticion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/discoParticion32.png"))); // NOI18N
+        btnCrearParticion.setText("PARTICIONES");
+        btnCrearParticion.setToolTipText("Crear particiones");
+        btnCrearParticion.setContentAreaFilled(false);
+        btnCrearParticion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCrearParticion.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/discoParticion32.png"))); // NOI18N
+        btnCrearParticion.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/discoParticion48.png"))); // NOI18N
+        btnCrearParticion.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btnCrearParticion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCrearParticion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnArchivoActionPerformed(evt);
+                btnCrearParticionActionPerformed(evt);
             }
         });
-        getContentPane().add(btnArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, 80));
+        getContentPane().add(btnCrearParticion, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, 80));
 
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/2.jpg"))); // NOI18N
         getContentPane().add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 660));
@@ -95,73 +96,13 @@ public class FrmDisco extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArchivoActionPerformed
-        String nombre = "";
-        String tamannioS = "";
-        int tamannio = 0;
-        int tipo = 0;
-        String tipoS = "";
+    private void btnCrearParticionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearParticionActionPerformed
+       
+    }//GEN-LAST:event_btnCrearParticionActionPerformed
 
-        //-----------------------------------------------------------------------------------------------------------------------------------//
-        do {
-            nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su archivo", "ARCHIVO", JOptionPane.QUESTION_MESSAGE);
-            if (("".equals(nombre))) {
-                JOptionPane.showMessageDialog(null, "El nombre no puede estar vacio", "ARCHIVO", JOptionPane.ERROR_MESSAGE);
-            }
-        } while ("".equals(nombre));
-
-        //-----------------------------------------------------------------------------------------------------------------------------------//
-        do {
-            tamannioS = JOptionPane.showInputDialog(null, "Digite el tamaño de su archivo", "ARCHIVO", JOptionPane.QUESTION_MESSAGE);
-            tamannio = Integer.parseInt(tamannioS);
-            if (tamannio == 0) {
-                JOptionPane.showMessageDialog(null, "El tamaño no puede ser 0", "ARCHIVO", JOptionPane.ERROR_MESSAGE);
-            }
-        } while (tamannio == 0);
-
-        //-----------------------------------------------------------------------------------------------------------------------------------//
-        do {
-            tipoS = JOptionPane.showInputDialog(null, "Escoja un tipo de archivo:\n0- Salir\n1- Audio\n2- Video\n3- Word\n4- Texto \n5- Excel\n6- PowerPoint", "ARCHIVO", JOptionPane.QUESTION_MESSAGE);
-            tipo = Integer.parseInt(tipoS);
-            if (tipo == 0) {
-                break;
-            }
-        } while (tipo != 0 || tipo != 1 || tipo != 2 || tipo != 3 || tipo != 4 || tipo != 5 || tipo != 6);
-
-        Creador c = new Creador();
-        c.Crear(tipo, nombre, tamannio);
-        JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "ARCHIVO", JOptionPane.PLAIN_MESSAGE);
-    }//GEN-LAST:event_btnArchivoActionPerformed
-
-    private void btnCarpetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCarpetaActionPerformed
-
-        String nombre = "";
-        String tamannioS = "";
-        int tamannio = 0;
-
-        //-----------------------------------------------------------------------------------------------------------------------------------//
-        do {
-            nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
-            if (("".equals(nombre))) {
-                JOptionPane.showMessageDialog(null, "El nombre no puede estar vacio", "CARPETA", JOptionPane.ERROR_MESSAGE);
-            }
-
-        } while ("".equals(nombre));
-        //-----------------------------------------------------------------------------------------------------------------------------------//
-
-        tamannioS = JOptionPane.showInputDialog(null, "Digite el tamaño de su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
-        tamannio = Integer.parseInt(tamannioS);
-        JOptionPane.showMessageDialog(null, "CREADO CON ÉXITO", "ARCHIVO", JOptionPane.PLAIN_MESSAGE);
-
-        //-----------------------------------------------------------------------------------------------------------------------------------//
-        Carpeta carpeta = new Carpeta(nombre, tamannio);
-                JOptionPane.showMessageDialog(null, "El nombre de la carpeta ya existe. Por favor, nombre distinto a la carpeta.", "Se ha producido un error.", JOptionPane.ERROR_MESSAGE);
-                nombre = JOptionPane.showInputDialog(null, "Escriba un nombre para su carpeta", "CARPETA", JOptionPane.QUESTION_MESSAGE);
-
-        carpeta.agregar(carpeta);
-
-
-    }//GEN-LAST:event_btnCarpetaActionPerformed
+    private void btnCrearDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearDiscoActionPerformed
+        Disco sr = Disco.getInstancia();
+    }//GEN-LAST:event_btnCrearDiscoActionPerformed
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         this.dispose();
@@ -266,9 +207,9 @@ public class FrmDisco extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnArchivo;
     private javax.swing.JButton btnAtras;
-    private javax.swing.JButton btnCarpeta;
+    private javax.swing.JButton btnCrearDisco;
+    private javax.swing.JButton btnCrearParticion;
     private javax.swing.JLabel lblEstasEn;
     private javax.swing.JLabel lblFondo;
     // End of variables declaration//GEN-END:variables
